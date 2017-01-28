@@ -1,0 +1,31 @@
+<div class="cars">
+    <h1 class="text-capitalize">Wybierz samochód</h1>
+    <table class="table table-striped table-hover">
+        <tr>
+            <th class="col-sm-1">ID</th>
+            <th class="col-sm-2">Manufactor</th>
+            <th class="col-sm-1">Model</th>
+            <th class="col-sm-1">Year</th>
+            <th class="col-sm-1">Fuel</th>
+            <th class="col-sm-1">Transmission</th>
+            <th class="col-sm-1">AC</th>
+            <th class="col-sm-1">Short Price</th>
+            <th class="col-sm-1">Medium Price</th>
+            <th class="col-sm-1">Long Price</th>
+            <th class="col-sm-1">Quantity</th>
+        </tr>
+            <tr ng-repeat="car in allCars">
+            <td class="col-sm-1"><a ng-click="selectCar($index)" href="#!/view2">{{$index+1}}</a></td>
+            <td class="col-sm-2">{{car.MANUFACTOR}}</td>
+            <td class="col-sm-1">{{car.MODEL}}</td>
+            <td class="col-sm-1">{{car.YEAR}}</td>
+            <td class="col-sm-1">{{car.FUEL}}</td>
+            <td class="col-sm-1">{{car.TRANSMISSION}}</td>
+            <td class="col-sm-1">{{car.AC}}</td>
+            <td class="col-sm-1">{{car.SHORT_PRICE | currency}}</td>
+            <td class="col-sm-1">{{car.MEDIUM_PRICE | currency}}</td>
+            <td class="col-sm-1">{{car.LONG_PRICE | currency}}</td>
+            <td class="col-sm-1">{{car.QUANTITY}}</td>
+        </tr>
+    </table>
+</div>
